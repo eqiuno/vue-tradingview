@@ -6,6 +6,7 @@
 </template>
 
 <script>
+<<<<<<< HEAD
   import { setTimeout } from 'timers';
   import Axios from 'axios'
   const supportedSymbols = ['btcusdt', 'ethusdt', 'ltcusdt', 'eosusdt']
@@ -148,15 +149,29 @@
     }
 
   }
+=======
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
     export default {
       name: "HelloWorld",
         mounted: function() {
             const this_vue = this;
+<<<<<<< HEAD
             //this_vue.getChartData();//todo: do odkomentowania na feedzie
             // if(window.localStorage.getItem("chart_settings")) //todo: do sprawdzenia w bardziej zaawansowanym stanie
             //     this_vue.saved_chart = JSON.parse(window.localStorage.getItem("chart_settings"));
             this_vue.feed = this_vue.createFeed();
             window.TradingView.onready(function (configurationData) {
+=======
+
+            //this_vue.getChartData();//todo: do odkomentowania na feedzie
+
+            // if(window.localStorage.getItem("chart_settings")) //todo: do sprawdzenia w bardziej zaawansowanym stanie
+            //     this_vue.saved_chart = JSON.parse(window.localStorage.getItem("chart_settings"));
+
+            this_vue.feed = this_vue.createFeed();
+
+            TradingView.onready(function (configurationData) {
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 this_vue.chart = window.tvWidget = new TradingView.widget({
                     fullscreen: false,
                     autosize: true,
@@ -192,6 +207,7 @@
                         tools: [{name: "Trend Line", grayed: true}, {name: "Trend Angle", grayed: true}] //todo: bb
                     },
                     disabled_features: [
+<<<<<<< HEAD
                         // "header_symbol_search",
                         // "header_interval_dialog_button",
                         // "show_interval_dialog_on_key_press",
@@ -211,12 +227,34 @@
                         // "compare_symbol",
                         // "border_around_the_chart",
                         // "timezone_menu",
+=======
+                        "header_symbol_search",
+                        "header_interval_dialog_button",
+                        "show_interval_dialog_on_key_press",
+                        "symbol_search_hot_key",
+                        "study_dialog_search_control",
+                        "display_market_status",
+                        "header_compare",
+                        "edit_buttons_in_legend",
+                        "symbol_info",
+                        "border_around_the_chart",
+                        "main_series_scale_menu",
+                        "star_some_intervals_by_default",
+                        "datasource_copypaste",
+                        "right_bar_stays_on_scroll",
+                        "context_menus",
+                        "go_to_date",
+                        "compare_symbol",
+                        "border_around_the_chart",
+                        "timezone_menu",
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                         //"header_resolutions",//todo: przetestowac
                         //"control_bar",//todo: przetestowac
                         //"edit_buttons_in_legend",//todo: przetestowac
                         "remove_library_container_border",
                     ],
                     enabled_features: [
+<<<<<<< HEAD
                         // "dont_show_boolean_study_arguments",
                         // "use_localstorage_for_settings",
                         // "remove_library_container_border",
@@ -224,6 +262,15 @@
                         // "side_toolbar_in_fullscreen_mode",
                         // "hide_last_na_study_output",
                         // "constraint_dialogs_movement",//todo: nie do końca jestem pewien
+=======
+                        "dont_show_boolean_study_arguments",
+                        "use_localstorage_for_settings",
+                        "remove_library_container_border",
+                        "save_chart_properties_to_local_storage",
+                        "side_toolbar_in_fullscreen_mode",
+                        "hide_last_na_study_output",
+                        "constraint_dialogs_movement",//todo: nie do końca jestem pewien
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                     ],
                     studies_overrides: {
                         "volume.volume.color.0": "#fe4761",
@@ -231,6 +278,7 @@
                         "volume.volume.transparency": 75,
                     },
                     overrides: {
+<<<<<<< HEAD
                         // "symbolWatermarkProperties.color": "rgba(0,0,0, 0)",
                         // "paneProperties.background": "#20334d",
                         // "paneProperties.vertGridProperties.color": "#344568",
@@ -325,6 +373,110 @@
                     custom_css_url: 'chart.css'
                 });
             });
+=======
+                        "symbolWatermarkProperties.color": "rgba(0,0,0, 0)",
+                        "paneProperties.background": "#20334d",
+                        "paneProperties.vertGridProperties.color": "#344568",
+                        "paneProperties.horzGridProperties.color": "#344568",
+                        "paneProperties.crossHairProperties.color": "#58637a",
+                        "paneProperties.crossHairProperties.style": 2,
+                        "mainSeriesProperties.style": 9,
+                        "mainSeriesProperties.showCountdown": false,
+                        "scalesProperties.showSeriesLastValue": true,
+                        "mainSeriesProperties.visible": false,
+                        "mainSeriesProperties.showPriceLine": false,
+                        "mainSeriesProperties.priceLineWidth": 1,
+                        "mainSeriesProperties.lockScale": false,
+                        "mainSeriesProperties.minTick": "default",
+                        "mainSeriesProperties.extendedHours": false,
+                        "volumePaneSize": "tiny",
+                        editorFontsList: ["Lato", "Arial", "Verdana", "Courier New", "Times New Roman"],
+                        "paneProperties.topMargin": 5,
+                        "paneProperties.bottomMargin": 5,
+                        "paneProperties.leftAxisProperties.autoScale": true,
+                        "paneProperties.leftAxisProperties.autoScaleDisabled": false,
+                        "paneProperties.leftAxisProperties.percentage": false,
+                        "paneProperties.leftAxisProperties.percentageDisabled": false,
+                        "paneProperties.leftAxisProperties.log": false,
+                        "paneProperties.leftAxisProperties.logDisabled": false,
+                        "paneProperties.leftAxisProperties.alignLabels": true,
+                        // "paneProperties.legendProperties.showStudyArguments": true,
+                        "paneProperties.legendProperties.showStudyTitles": true,
+                        "paneProperties.legendProperties.showStudyValues": true,
+                        "paneProperties.legendProperties.showSeriesTitle": true,
+                        "paneProperties.legendProperties.showSeriesOHLC": true,
+                        "scalesProperties.showLeftScale": false,
+                        "scalesProperties.showRightScale": true,
+                        "scalesProperties.backgroundColor": "#20334d",
+                        "scalesProperties.lineColor": "#46587b",
+                        "scalesProperties.textColor": "#8f98ad",
+                        "scalesProperties.scaleSeriesOnly": false,
+                        "mainSeriesProperties.priceAxisProperties.autoScale": true,
+                        "mainSeriesProperties.priceAxisProperties.autoScaleDisabled": false,
+                        "mainSeriesProperties.priceAxisProperties.percentage": false,
+                        "mainSeriesProperties.priceAxisProperties.percentageDisabled": false,
+                        "mainSeriesProperties.priceAxisProperties.log": false,
+                        "mainSeriesProperties.priceAxisProperties.logDisabled": false,
+                        "mainSeriesProperties.candleStyle.upColor": "#3fcfb4",
+                        "mainSeriesProperties.candleStyle.downColor": "#fe4761",
+                        "mainSeriesProperties.candleStyle.drawWick": true,
+                        "mainSeriesProperties.candleStyle.drawBorder": true,
+                        "mainSeriesProperties.candleStyle.borderColor": "#3fcfb4",
+                        "mainSeriesProperties.candleStyle.borderUpColor": "#3fcfb4",
+                        "mainSeriesProperties.candleStyle.borderDownColor": "#fe4761",
+                        "mainSeriesProperties.candleStyle.wickColor": "#737375",
+                        "mainSeriesProperties.candleStyle.wickUpColor": "#3fcfb4",
+                        "mainSeriesProperties.candleStyle.wickDownColor": "#fe4761",
+                        "mainSeriesProperties.candleStyle.barColorsOnPrevClose": false,
+                        "mainSeriesProperties.hollowCandleStyle.upColor": "#3fcfb4",
+                        "mainSeriesProperties.hollowCandleStyle.downColor": "#fe4761",
+                        "mainSeriesProperties.hollowCandleStyle.drawWick": true,
+                        "mainSeriesProperties.hollowCandleStyle.drawBorder": true,
+                        "mainSeriesProperties.hollowCandleStyle.borderColor": "#3fcfb4",
+                        "mainSeriesProperties.hollowCandleStyle.borderUpColor": "#3fcfb4",
+                        "mainSeriesProperties.hollowCandleStyle.borderDownColor": "#fe4761",
+                        "mainSeriesProperties.hollowCandleStyle.wickColor": "#737375",
+                        "mainSeriesProperties.hollowCandleStyle.wickUpColor": "#3fcfb4",
+                        "mainSeriesProperties.hollowCandleStyle.wickDownColor": "#fe4761",
+                        "mainSeriesProperties.haStyle.upColor": "#3fcfb4",
+                        "mainSeriesProperties.haStyle.downColor": "#fe4761",
+                        "mainSeriesProperties.haStyle.drawWick": true,
+                        "mainSeriesProperties.haStyle.drawBorder": true,
+                        "mainSeriesProperties.haStyle.borderColor": "#3fcfb4",
+                        "mainSeriesProperties.haStyle.borderUpColor": "#3fcfb4",
+                        "mainSeriesProperties.haStyle.borderDownColor": "#fe4761",
+                        "mainSeriesProperties.haStyle.wickColor": "#737375",
+                        "mainSeriesProperties.haStyle.wickUpColor": "#3fcfb4",
+                        "mainSeriesProperties.haStyle.wickDownColor": "#fe4761",
+                        "mainSeriesProperties.haStyle.barColorsOnPrevClose": false,
+                        "mainSeriesProperties.barStyle.upColor": "#3fcfb4",
+                        "mainSeriesProperties.barStyle.downColor": "#fe4761",
+                        "mainSeriesProperties.barStyle.barColorsOnPrevClose": false,
+                        "mainSeriesProperties.barStyle.dontDrawOpen": false,
+                        "mainSeriesProperties.lineStyle.color": "#0cbef3",
+                        "mainSeriesProperties.lineStyle.linestyle": 0,
+                        "mainSeriesProperties.lineStyle.linewidth": 1,
+                        "mainSeriesProperties.lineStyle.priceSource": "close",
+                        "mainSeriesProperties.areaStyle.color1": "#0cbef3",
+                        "mainSeriesProperties.areaStyle.color2": "#0098c4",
+                        "mainSeriesProperties.areaStyle.linecolor": "#0cbef3",
+                        "mainSeriesProperties.areaStyle.linestyle": 0,
+                        "mainSeriesProperties.areaStyle.linewidth": 1,
+                        "mainSeriesProperties.areaStyle.priceSource": "close",
+                        "mainSeriesProperties.areaStyle.transparency": 80
+                    },
+                    custom_css_url: 'chart.css'
+
+                });
+
+
+
+
+            });
+
+
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
         },
         methods: {
             getChartData: function() {
@@ -365,15 +517,27 @@
             createFeed: function(){
                 let this_vue = this;
                 let Datafeed = {};
+<<<<<<< HEAD
                 Datafeed.DataPulseUpdater = function(datafeed, updateFrequency) {
                     this._datafeed = datafeed;
                     this._subscribers = {};
                     this._requestsPending = 0;
                     var that = this;
+=======
+
+                Datafeed.DataPulseUpdater = function(datafeed, updateFrequency) {
+                    this._datafeed = datafeed;
+                    this._subscribers = {};
+
+                    this._requestsPending = 0;
+                    var that = this;
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                     var update = function() {
                         if (that._requestsPending > 0) {
                             return;
                         }
+<<<<<<< HEAD
                         for (var listenerGUID in that._subscribers) {
                             var subscriptionRecord = that._subscribers[listenerGUID];
                             var resolution = subscriptionRecord.resolution;
@@ -385,37 +549,88 @@
                             (function(_subscriptionRecord) { // eslint-disable-line
                                 that._datafeed.getBars(_subscriptionRecord.symbolInfo, resolution, datesRangeLeft, datesRangeRight, function(bars) {
                                         that._requestsPending--;
+=======
+
+                        for (var listenerGUID in that._subscribers) {
+                            var subscriptionRecord = that._subscribers[listenerGUID];
+                            var resolution = subscriptionRecord.resolution;
+
+                            var datesRangeRight = parseInt((new Date().valueOf()) / 1000);
+
+                            //	BEWARE: please note we really need 2 bars, not the only last one
+                            //	see the explanation below. `10` is the `large enough` value to work around holidays
+                            var datesRangeLeft = datesRangeRight - that.periodLengthSeconds(resolution, 10);
+
+                            that._requestsPending++;
+
+                            (function(_subscriptionRecord) { // eslint-disable-line
+                                that._datafeed.getBars(_subscriptionRecord.symbolInfo, resolution, datesRangeLeft, datesRangeRight, function(bars) {
+                                        that._requestsPending--;
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                                         //	means the subscription was cancelled while waiting for data
                                         if (!that._subscribers.hasOwnProperty(listenerGUID)) {
                                             return;
                                         }
+<<<<<<< HEAD
                                         if (bars.length === 0) {
                                             return;
                                         }
+=======
+
+                                        if (bars.length === 0) {
+                                            return;
+                                        }
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                                         var lastBar = bars[bars.length - 1];
                                         if (!isNaN(_subscriptionRecord.lastBarTime) && lastBar.time < _subscriptionRecord.lastBarTime) {
                                             return;
                                         }
+<<<<<<< HEAD
                                         var subscribers = _subscriptionRecord.listeners;
                                         //	BEWARE: this one isn't working when first update comes and this update makes a new bar. In this case
                                         //	_subscriptionRecord.lastBarTime = NaN
                                         var isNewBar = !isNaN(_subscriptionRecord.lastBarTime) && lastBar.time > _subscriptionRecord.lastBarTime;
+=======
+
+                                        var subscribers = _subscriptionRecord.listeners;
+
+                                        //	BEWARE: this one isn't working when first update comes and this update makes a new bar. In this case
+                                        //	_subscriptionRecord.lastBarTime = NaN
+                                        var isNewBar = !isNaN(_subscriptionRecord.lastBarTime) && lastBar.time > _subscriptionRecord.lastBarTime;
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                                         //	Pulse updating may miss some trades data (ie, if pulse period = 10 secods and new bar is started 5 seconds later after the last update, the
                                         //	old bar's last 5 seconds trades will be lost). Thus, at fist we should broadcast old bar updates when it's ready.
                                         if (isNewBar) {
                                             if (bars.length < 2) {
                                                 throw new Error('Not enough bars in history for proper pulse update. Need at least 2.');
                                             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                                             var previousBar = bars[bars.length - 2];
                                             for (var i = 0; i < subscribers.length; ++i) {
                                                 subscribers[i](previousBar);
                                             }
                                         }
+<<<<<<< HEAD
                                         _subscriptionRecord.lastBarTime = lastBar.time;
+=======
+
+                                        _subscriptionRecord.lastBarTime = lastBar.time;
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                                         for (var i = 0; i < subscribers.length; ++i) {
                                             subscribers[i](lastBar);
                                         }
                                     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                                     //	on error
                                     function() {
                                         that._requestsPending--;
@@ -423,12 +638,23 @@
                             })(subscriptionRecord);
                         }
                     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                     if (typeof updateFrequency != 'undefined' && updateFrequency > 0) {
                         setInterval(update, updateFrequency);
                     }
                 };
+<<<<<<< HEAD
                 Datafeed.DataPulseUpdater.prototype.periodLengthSeconds = function(resolution, requiredPeriodsCount) {
                     var daysCount = 0;
+=======
+
+                Datafeed.DataPulseUpdater.prototype.periodLengthSeconds = function(resolution, requiredPeriodsCount) {
+                    var daysCount = 0;
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                     if (resolution === 'D') {
                         daysCount = requiredPeriodsCount;
                     } else if (resolution === 'M') {
@@ -438,10 +664,20 @@
                     } else {
                         daysCount = requiredPeriodsCount * resolution / (24 * 60);
                     }
+<<<<<<< HEAD
                     return daysCount * 24 * 60 * 60;
                 };
                 Datafeed.DataPulseUpdater.prototype.subscribeDataListener = function(symbolInfo, resolution, newDataCallback, listenerGUID) {
                     this._datafeed._logMessage('Subscribing ' + listenerGUID);
+=======
+
+                    return daysCount * 24 * 60 * 60;
+                };
+
+                Datafeed.DataPulseUpdater.prototype.subscribeDataListener = function(symbolInfo, resolution, newDataCallback, listenerGUID) {
+                    this._datafeed._logMessage('Subscribing ' + listenerGUID);
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                     if (!this._subscribers.hasOwnProperty(listenerGUID)) {
                         this._subscribers[listenerGUID] = {
                             symbolInfo: symbolInfo,
@@ -450,12 +686,23 @@
                             listeners: []
                         };
                     }
+<<<<<<< HEAD
                     this._subscribers[listenerGUID].listeners.push(newDataCallback);
                 };
+=======
+
+                    this._subscribers[listenerGUID].listeners.push(newDataCallback);
+                };
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 Datafeed.DataPulseUpdater.prototype.unsubscribeDataListener = function(listenerGUID) {
                     this._datafeed._logMessage('Unsubscribing ' + listenerGUID);
                     delete this._subscribers[listenerGUID];
                 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 Datafeed.Container = function(updateFrequency){
                     this._configuration = {
                         supports_search: false,
@@ -465,36 +712,70 @@
                         supports_timescale_marks: true,
                         exchanges: ['myExchange']
                     };
+<<<<<<< HEAD
                     this._barsPulseUpdater = new Datafeed.DataPulseUpdater(this, updateFrequency || 10 * 1000);
                     // this._quotesPulseUpdater = new Datafeed.QuotesPulseUpdater(this);
                     this._enableLogging = true;
                     this._callbacks = {};
+=======
+
+                    this._barsPulseUpdater = new Datafeed.DataPulseUpdater(this, updateFrequency || 10 * 1000);
+                    // this._quotesPulseUpdater = new Datafeed.QuotesPulseUpdater(this);
+
+                    this._enableLogging = true;
+                    this._callbacks = {};
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                     this._initializationFinished = true;
                     this._fireEvent('initialized');
                     this._fireEvent('configuration_ready');
                 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 Datafeed.Container.prototype._fireEvent = function(event, argument) {
                     if (this._callbacks.hasOwnProperty(event)) {
                         var callbacksChain = this._callbacks[event];
                         for (var i = 0; i < callbacksChain.length; ++i) {
                             callbacksChain[i](argument);
                         }
+<<<<<<< HEAD
                         this._callbacks[event] = [];
                     }
                 };
+=======
+
+                        this._callbacks[event] = [];
+                    }
+                };
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 Datafeed.Container.prototype._logMessage = function(message) {
                     if (this._enableLogging) {
                         var now = new Date();
                         console.log("CHART LOGS: "+now.toLocaleTimeString() + '.' + now.getMilliseconds() + '> ' + message);
                     }
                 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 Datafeed.Container.prototype.on = function(event, callback) {
                     if (!this._callbacks.hasOwnProperty(event)) {
                         this._callbacks[event] = [];
                     }
+<<<<<<< HEAD
                     this._callbacks[event].push(callback);
                     return this;
                 };
+=======
+
+                    this._callbacks[event].push(callback);
+                    return this;
+                };
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 Datafeed.Container.prototype.onReady = function(callback) {
                     let that = this;
                     if (this._configuration) {
@@ -508,15 +789,27 @@
                         });
                     }
                 };
+<<<<<<< HEAD
                 Datafeed.Container.prototype.resolveSymbol = function(symbolName, onSymbolResolvedCallback, onResolveErrorCallback) {
                     this._logMessage("GOWNO :: resolve symbol "+ symbolName);
                     Promise.resolve().then(() => {
+=======
+
+                Datafeed.Container.prototype.resolveSymbol = function(symbolName, onSymbolResolvedCallback, onResolveErrorCallback) {
+                    this._logMessage("GOWNO :: resolve symbol "+ symbolName);
+                    Promise.resolve().then(() => {
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                         function adjustScale(){
                             if(this_vue.last_price>1000)
                                 return 100;
                             else
                                 return 100000000;
                         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                         this._logMessage("GOWNO :: onResultReady inject "+this_vue.currency1 + ":"+ this_vue.currency2);
                         onSymbolResolvedCallback({
                             "name": this_vue.currency1 + ":"+ this_vue.currency2,
@@ -538,6 +831,10 @@
                         });
                     })
                 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 Datafeed.Container.prototype.getBars = function(symbolInfo, resolution, rangeStartDate, rangeEndDate, onDataCallback, onErrorCallback) {
                     if (rangeStartDate > 0 && (rangeStartDate + '').length > 10) {
                         throw new Error(['Got a JS time instead of Unix one.', rangeStartDate, rangeEndDate]);
@@ -545,6 +842,10 @@
                     onDataCallback([], { noData: true });
                     //onDataCallback(bars, { noData: true , nextTime: data.nb || data.nextTime });
                 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 Datafeed.Container.prototype.subscribeBars = function(symbolInfo, resolution, onRealtimeCallback, listenerGUID, onResetCacheNeededCallback) {
                     this_vue.bars.forEach(function (bar) { // in subscribeBars
                         onRealtimeCallback(bar)
@@ -554,9 +855,17 @@
                     });
                     //this._barsPulseUpdater.subscribeDataListener(symbolInfo, resolution, onRealtimeCallback, listenerGUID, onResetCacheNeededCallback);
                 };
+<<<<<<< HEAD
                 Datafeed.Container.prototype.unsubscribeBars = function(listenerGUID) {
                     this._barsPulseUpdater.unsubscribeDataListener(listenerGUID);
                 };
+=======
+
+                Datafeed.Container.prototype.unsubscribeBars = function(listenerGUID) {
+                    this._barsPulseUpdater.unsubscribeDataListener(listenerGUID);
+                };
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 return new Datafeed.Container;
             },
             adjustChart: function(){
@@ -564,6 +873,10 @@
                 let chart_top = chart_iframe.contents().find(".header-chart-panel");
                 let chart_top_container = chart_iframe.contents().find(".header-chart-panel-content");
                 let chart_bottom = chart_iframe.contents().find(".date-range-wrapper");
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
                 chart_bottom.appendTo(chart_top_container);
             }
         },
@@ -615,6 +928,10 @@
                 ]
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
     }
 </script>
 
@@ -634,4 +951,8 @@ li {
 a {
   color: #42b983;
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> c16e10b1c13f1718af7f837761cffa34b5703d41
